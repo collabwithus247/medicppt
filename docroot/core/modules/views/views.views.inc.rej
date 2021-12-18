@@ -1,0 +1,39 @@
+--- modules/views/views.views.inc
++++ modules/views/views.views.inc
+@@ -507,7 +507,7 @@ function views_field_default_views_data(FieldStorageConfigInterface $field_stora
+   // Determine the label to use for the field. We don't have a label available
+   // at the field level, so we just go through all fields and take the one
+   // which is used the most frequently.
+-  list($label, $all_labels) = views_entity_field_label($entity_type_id, $field_name);
++  [$label, $all_labels] = views_entity_field_label($entity_type_id, $field_name);
+ 
+   // Expose data for the field as a whole.
+   foreach ($field_tables as $type => $table_info) {
+@@ -767,9 +767,10 @@ function views_field_default_views_data(FieldStorageConfigInterface $field_stora
+ /**
+  * Implements hook_field_views_data().
+  *
+- * The function implements the hook in behalf of 'core' because it adds a
+- * relationship and a reverse relationship to entity_reference field type, which
+- * is provided by core.
++ * The function implements the hook in behalf of 'core' because it updates
++ * filters to use the entity_reference handler, adds a relationship and a
++ * reverse relationship to entity_reference field type, which is provided by
++ * core.
+  */
+ function core_field_views_data(FieldStorageConfigInterface $field_storage) {
+   $data = views_field_default_views_data($field_storage);
+@@ -794,6 +795,13 @@ function core_field_views_data(FieldStorageConfigInterface $field_storage) {
+     $field_name = $field_storage->getName();
+ 
+     if ($target_entity_type instanceof ContentEntityTypeInterface) {
++      // Use the entity_reference filter for this field.
++      foreach ($table_data as $table_field_name => $table_field_data) {
++        if (isset($table_field_data['filter']) && $table_field_name != 'delta') {
++          $data[$table_name][$table_field_name]['filter']['id'] = 'entity_reference';
++        }
++      }
++
+       // Provide a relationship for the entity type with the entity reference
+       // field.
+       $args = [
