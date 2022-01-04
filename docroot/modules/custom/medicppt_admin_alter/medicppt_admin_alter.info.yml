@@ -1,0 +1,5 @@
+name: MedicPPT Admin Alter
+type: module
+description: 'Use to alter admin behaviour'
+package: Custom
+core_version_requirement: ^8.9 || ^9

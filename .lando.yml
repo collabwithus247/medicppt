@@ -1,0 +1,36 @@
+name: medicppt
+recipe: drupal9
+config:
+  via: apache
+  php: '7.4'
+  webroot: docroot/
+  drush: ^10
+  database: mysql
+services:
+  appserver:
+    overrides: {image: 'acquia/ads-local:lando-php-7.3-nodejs-12'}
+    scanner: false
+    build_as_root:
+      - npm install -g gulp-cli gulp
+# services:
+#   node:
+#     type: node:12.16
+#   appserver:
+#     type: php:7.4
+#   solr:
+#     type: solr:4.10
+#     core: collection1
+#     portforward: true
+#     config:
+#       dir: docroot/modules/contrib/search_api_solr/solr-conf/4.x
+tooling:
+  blt:
+    service: appserver
+    cmd: /app/vendor/bin/blt
+#   npm:
+#     service: node
+#   node:
+#     service: node
+proxy:
+  appserver:
+    - medicppt.lndo.site

@@ -1,0 +1,4 @@
+medicppt.content_type.banner_pages:
+  version: 1.x
+  js:
+    js/content_type/banner-pages.js: {}

@@ -1,0 +1,54 @@
+//global styles
+@import "./global/_mixins";
+@import "./global/_variables";
+@import "./global/_colors";
+@import "./global/_font-size";
+@import "./global/_media-size";
+
+//slick styles
+@import "./slick/slick";
+@import "./slick/slick-theme";
+
+// aos
+@import "./aos/aos";
+
+// Bootstrap Icon
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css");
+@import "font-family";
+
+//component styles
+@import "./components/header";
+@import "./components/card-carousel";
+
+//Fonts Import
+@import "font-family";
+@include font-face("SST Pro", fonts/SSTPro-MediumItalic, 500, italic);
+@include font-face("SST Pro Condensed", fonts/SSTPro-Condensed, normal, normal);
+@include font-face("SST Pro", fonts/SSTPro-Medium, 500, normal);
+@include font-face("SST Pro Condensed", fonts/SSTPro-CondensedMd, 500, normal);
+@include font-face("SST Pro", fonts/SSTPro-Italic, normal, italic);
+@include font-face("SST Pro Condensed", fonts/SSTPro-CondensedBd, bold, normal);
+@include font-face("SST Pro", fonts/SSTPro-LightItalic, 300, italic);
+@include font-face("SST Pro", fonts/SSTPro-BoldItalic, bold, italic);
+@include font-face("SST Pro", fonts/SSTPro-HeavyItalic, 900, italic);
+@include font-face("SST Pro", fonts/SSTPro-Bold, bold, normal);
+@include font-face("SST Pro", fonts/SSTPro-Light, 300, normal);
+@include font-face("SST Pro", fonts/SSTPro-Heavy, 900, normal);
+@include font-face("SST Pro Typewriter", fonts/SSTTypewriterPro-Roman, normal, normal);
+@include font-face("SST Pro Ultra", fonts/SSTPro-UltraLightItalic, 200, italic);
+@include font-face("SST Pro Typewriter", fonts/SSTTypewriterPro-Bd, bold, normal);
+@include font-face("SST Pro", fonts/SSTPro-Roman, normal, normal);
+@include font-face("SST Pro Ultra", fonts/SSTPro-UltraLight, 200, normal);
+
+body {
+  font-family: SST Pro;
+  font-weight: normal;
+  font-style: normal;
+}
+
+p {
+  font-family: $sstpro_roman;
+  font-weight: normal;
+  font-style: normal;
+}

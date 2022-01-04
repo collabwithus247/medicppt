@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_alter().
+ */
+function medicppt_admin_alter_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  switch ($form_id) {
+    case 'node_banner_pages_edit_form':
+    case 'node_banner_pages_form':
+      $form['#attached']['library'][] = 'medicppt_admin_alter/medicppt.content_type.banner_pages';
+      break;
+  }
+}
+
+// /**
+//  * Implements hook_theme_suggestions_alter().
+//  */
+// function medicppt_admin_alter_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
+// //  kint($suggestions);
+// }

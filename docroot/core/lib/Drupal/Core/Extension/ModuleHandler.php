@@ -592,16 +592,6 @@ class ModuleHandler implements ModuleHandlerInterface {
       $this->verified[$hook] = TRUE;
     }
     elseif (!isset($this->verified[$hook])) {
-      // Under certain circumstances the module files are not yet loaded. This
-      // happens for example when invoking a hook inside the constructor of a
-      // http_middleware service; theses services are constructed very early as
-      // a dependency of http_kernel service. A more concrete example is a
-      // middleware service using the entity_type.manager. Most of the times the
-      // the entity type information is retrieved from cache (stored in the
-      // discovery cache bin). When this cache however is missing, hooks
-      // like hook_entity_type_build() and hook_entity_type_alter() need to be
-      // invoked at this early stage.
-      $this->loadAll();
       if (!$this->verifyImplementations($this->implementations[$hook], $hook)) {
         // One or more of the implementations did not exist and need to be
         // removed in the cache.

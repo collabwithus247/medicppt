@@ -21,7 +21,3 @@ Views: Select, Dropdown reference field
 Source: https://www.drupal.org/files/issues/2021-10-22/2429699-429_0.patch
 
 
-paragraph entity type did not specify a translation handler
-Source: https://www.drupal.org/files/issues/2021-04-08/3207813-2.patch
-
-
