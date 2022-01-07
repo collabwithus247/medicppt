@@ -1,0 +1,231 @@
+.banner-pages--components {
+    .main-wrapper {
+        > .field__item {
+            > div {
+                padding: 60px 0;                
+            }
+            &:nth-of-type(3) {
+                .paragraph--type--title-component {
+                    .field--name-field-title {
+                        text-align: center;
+                        color: $white;
+                        font-family: $sstpro_medium;
+                        font-size: 24px;
+                        margin-bottom: 32px;
+                    }
+                }
+                .paragraph--type--section-component {
+                    .field__items {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        margin-left: -15px;
+                        margin-right: -15px;
+                        > .field__item {
+                            margin-bottom: 24px;
+                            padding-left: 15px;
+                            padding-right: 15px;
+                            flex: 0 0 33.3333%;
+                            max-width: 33.3333%;
+                            .paragraph--type--basic-component {
+                                text-align: center;
+                                .field--name-field-image {
+                                    margin: 0;
+                                    .field--name-field-media-image {
+                                        float: none;
+                                        margin: 0;
+                                        height: 55px;
+                                        img {
+                                            margin: 0;
+                                        }
+                                    }
+                                }
+                                .field--name-field-title {
+                                    color: $white;
+                                    font-family: $sstpro_medium;
+                                    font-size: 18px;
+                                    margin-bottom: 20px;
+                                }
+                                .field--name-field-description {
+                                    p {
+                                        color: $white;
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .paragraph--type--link-component {
+                    .field--name-field-link {
+                        text-align: center;
+                        a {
+                            padding: 10px 40px 14px;
+                            display: inline-block;
+                            color: $primary-color;
+                            font-family: $sstpro_medium;
+                            font-size: 20px;
+                            background: $white;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+            &:nth-of-type(4) {
+                .field--name-field-section-component {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin-left: -15px;
+                    margin-right: -15px;
+                    > .field__item {
+                        padding-left: 15px;
+                        padding-right: 15px;
+                        flex: 0 0 50%;
+                        max-width: 50%;
+                        .paragraph--type--description-component {
+                            .field--name-field-description {
+                                h2 {
+                                    font-family: $sstpro_medium;
+                                    font-size: 24px;
+                                    margin-bottom: 24px;
+                                }
+                                p {
+                                    font-size: 14px;
+                                }
+                                ul {
+                                    li {
+                                        font-size: 14px;
+                                        padding-bottom: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &:nth-of-type(5) {
+                .field--name-field-section-component {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin-left: -15px;
+                    margin-right: -15px;
+                    > .field__item {
+                        padding-left: 15px;
+                        padding-right: 15px;
+                        flex: 0 0 50%;
+                        max-width: 50%;
+                        .paragraph--type--description-component {
+                            .field--name-field-description {
+                                h2 {
+                                    font-family: $sstpro_medium;
+                                    font-size: 24px;
+                                    margin-bottom: 24px;
+                                }
+                                p {
+                                    font-size: 14px;
+                                }
+                                ul {
+                                    li {
+                                        font-size: 14px;
+                                        padding-bottom: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &:nth-of-type(6) {
+                .field--name-field-section-component {
+                    > .field__item {
+                        .paragraph--type--title-component {
+                            .field--name-field-title {
+                                text-align: center;
+                                color: $white;
+                                font-family: $sstpro_medium;
+                                font-size: 24px;
+                            }
+                        }
+                        .paragraph--type--description-component {
+                            .field--name-field-description {
+                                text-align: center;
+                                p {
+                                    text-align: center;
+                                    color: $white;
+                                }
+                            }
+                        }
+                        .paragraph--type--custom-block-component {
+                            #block-socialicons {
+                                display: none;
+                            }
+                        }
+                        .paragraph.paragraph--type--webform {
+                            padding: 30px;
+                            max-width: 70%;
+                            margin: 0 auto;
+                            border-radius: 30px;
+                            background: $white;
+                            .form-item-leave-us-message {
+                                text-align: center;
+                                label {
+                                    font-family: $sstpro_medium;
+                                    font-size: 24px;
+                                }
+                            }
+                            .js-form-wrapper {
+                                margin: 0 -15px;
+                                display: flex;
+                                flex-wrap: wrap;
+                                .js-form-item {
+                                    padding-left: 15px;
+                                    padding-right: 15px;
+                                    flex: 0 0 50%;
+                                    max-width: 50%;
+                                    label {
+                                        font-size: 12px;
+                                    }
+                                    .form-control {
+                                        border: none;
+                                        border-bottom: 2px solid #ccc;
+                                        padding: 5px 0;
+                                        border-radius: 0px;
+                                        &:focus {
+                                            box-shadow: unset;
+                                        }
+                                    }
+                                }
+                            }
+                            .form-item-describe-your-request {
+                                label {
+                                    margin-bottom: 5px;
+                                }
+                                textarea.form-control {
+                                    min-height: 100px;
+                                    height: 100px;
+                                    border-radius: 10px;
+                                    &:focus {
+                                        box-shadow: unset;
+                                    }
+                                }
+                            }
+                            .form-actions {
+                                justify-content: center;
+                                .btn-primary {
+                                    padding: 10px 30px 13px;
+                                    color: $white;
+                                    background: $primary-color;
+                                    &:focus {
+                                        box-shadow: unset;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

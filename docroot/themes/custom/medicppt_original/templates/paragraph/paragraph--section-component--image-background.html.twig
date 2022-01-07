@@ -50,7 +50,9 @@
 	{% set background_color = content.field_color[0]['#markup'] %}
   {# {{dpm(content.field_section_class)}} #}
 	{% set image_url = file_url(content.field_section_image[0]['#media'].field_media_image.entity.uri.value) %}
-	<div class="{{ content.field_section_class.value }}" style="background: url({{ image_url }});background-repeat: no-repeat;background-size: cover;">
+	<div style="background: url({{ image_url }});background-repeat: no-repeat;background-size: cover;">
+        <div class="container">
         {{content|without('field_section_image')}}
+        </div>
     </div>
 {% endblock paragraph %}
