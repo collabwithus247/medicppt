@@ -15,7 +15,7 @@
  *   and methods for the paragraph object.
  * - content: All paragraph items. Use {{ content }} to print them all,
  *   or print a subset such as {{ content.field_example }}. Use
- *   {{ content|without('field_example') }} to temporarily suppress the printing
+ * {{ content|without('field_example') }} to temporarily suppress the printing
  *   of a given child element.
  * - attributes: HTML attributes for the containing element.
  *   The attributes.class element may contain one or more of the following
@@ -48,11 +48,11 @@
 %}
 {% block paragraph %}
 	{% set background_color = content.field_color[0]['#markup'] %}
-  {# {{dpm(content.field_section_class)}} #}
 	{% set image_url = file_url(content.field_section_image[0]['#media'].field_media_image.entity.uri.value) %}
-	<div style="background: url({{ image_url }});background-repeat: no-repeat;background-size: cover;">
-        <div class="container">
-        {{content|without('field_section_image')}}
-        </div>
-    </div>
+	{% set section_class = content.field_section_class[0]['#context']['value'] %}
+	<div class="{{ section_class }}" style="background: url({{ image_url }});background-repeat: no-repeat;background-size: cover;">
+		<div class="container">
+			{{content|without('field_section_image')|without('field_section_class')}}
+		</div>
+	</div>
 {% endblock paragraph %}

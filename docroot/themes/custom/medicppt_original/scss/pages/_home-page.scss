@@ -4,7 +4,7 @@
             > div {
                 padding: 60px 0;                
             }
-            &:nth-of-type(3) {
+            .medicppt-services {
                 .paragraph--type--title-component {
                     .field--name-field-title {
                         text-align: center;
@@ -71,7 +71,7 @@
                     }
                 }
             }
-            &:nth-of-type(4) {
+            .medicppt-speciality {
                 .field--name-field-section-component {
                     display: flex;
                     flex-wrap: wrap;
@@ -104,7 +104,7 @@
                     }
                 }
             }
-            &:nth-of-type(5) {
+            .medicppt-team {
                 .field--name-field-section-component {
                     display: flex;
                     flex-wrap: wrap;
@@ -137,7 +137,7 @@
                     }
                 }
             }
-            &:nth-of-type(6) {
+            .medicppt-contact-us {
                 .field--name-field-section-component {
                     > .field__item {
                         .paragraph--type--title-component {

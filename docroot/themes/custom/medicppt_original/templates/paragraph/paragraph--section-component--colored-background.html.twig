@@ -47,10 +47,11 @@
   ]
 %}
 {% block paragraph %}
-    {% set background_color = content.field_color[0]['#markup'] %}
-    <div style="background-color: {{background_color}};">
+	{% set background_color = content.field_color[0]['#markup'] %}
+	{% set section_class = content.field_section_class[0]['#context']['value'] %}
+	<div class="{{ section_class }}" style="background-color: {{background_color}};">
 		<div class="container">
-    {{ content.field_section_component }}
-    </div>
+			{{ content.field_section_component }}
+		</div>
 	</div>
 {% endblock paragraph %}
