@@ -1,0 +1,10 @@
+uuid: e9f7f212-a7ed-4bb5-ab23-c163c1f402c0
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.ief_table
+label: 'Inline Entity Form Table'
+targetEntityType: paragraph
+cache: true

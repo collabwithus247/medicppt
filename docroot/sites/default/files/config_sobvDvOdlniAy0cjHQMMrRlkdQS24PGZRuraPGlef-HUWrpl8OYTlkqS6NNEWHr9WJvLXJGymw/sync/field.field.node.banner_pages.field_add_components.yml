@@ -1,0 +1,40 @@
+uuid: 93da0e17-aaa9-422b-8085-38d773e1e228
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_add_components
+    - node.type.banner_pages
+    - paragraphs.paragraphs_type.section_component
+  module:
+    - entity_reference_revisions
+id: node.banner_pages.field_add_components
+field_name: field_add_components
+entity_type: node
+bundle: banner_pages
+label: 'Add Components'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      section_component: section_component
+    negate: 0
+    target_bundles_drag_drop:
+      description_component:
+        weight: 4
+        enabled: false
+      section_component:
+        weight: 5
+        enabled: true
+      title_component:
+        weight: 2
+        enabled: false
+      webform:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

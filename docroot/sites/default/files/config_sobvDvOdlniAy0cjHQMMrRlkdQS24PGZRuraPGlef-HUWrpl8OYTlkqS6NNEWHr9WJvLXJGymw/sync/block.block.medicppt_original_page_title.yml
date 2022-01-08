@@ -1,0 +1,26 @@
+uuid: 4fd7baa5-c03a-4262-8c37-907c38b822e6
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - medicppt_original
+_core:
+  default_config_hash: ItFhhiUOoeR7oIq73ZaCV7PAYrOwXZ-9fazMzF5DJXM
+id: medicppt_original_page_title
+theme: medicppt_original
+region: fullwidth
+weight: -2
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /abc

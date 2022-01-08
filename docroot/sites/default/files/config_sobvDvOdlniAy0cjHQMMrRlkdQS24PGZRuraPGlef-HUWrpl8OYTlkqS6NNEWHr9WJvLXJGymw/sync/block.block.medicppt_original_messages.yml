@@ -1,0 +1,22 @@
+uuid: a704c4b9-6eab-4f61-a5b5-5ae46e5da762
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - medicppt_original
+_core:
+  default_config_hash: KC12e0aosUnBBs5bd374JVcQjJaFNOSIHzu0dUGf22o
+id: medicppt_original_messages
+theme: medicppt_original
+region: fullwidth
+weight: -4
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

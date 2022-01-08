@@ -1,0 +1,65 @@
+uuid: ad948256-899b-4e81-869b-1253e91a9b7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_component
+    - paragraphs.paragraphs_type.basic_component
+    - paragraphs.paragraphs_type.custom_block_component
+    - paragraphs.paragraphs_type.description_component
+    - paragraphs.paragraphs_type.image_component
+    - paragraphs.paragraphs_type.link_component
+    - paragraphs.paragraphs_type.section_component
+    - paragraphs.paragraphs_type.title_component
+    - paragraphs.paragraphs_type.webform
+  module:
+    - entity_reference_revisions
+id: paragraph.section_component.field_section_component
+field_name: field_section_component
+entity_type: paragraph
+bundle: section_component
+label: 'Section Component'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      section_component: section_component
+      description_component: description_component
+      title_component: title_component
+      custom_block_component: custom_block_component
+      basic_component: basic_component
+      webform: webform
+      image_component: image_component
+      link_component: link_component
+    negate: 0
+    target_bundles_drag_drop:
+      basic_component:
+        weight: 8
+        enabled: true
+      custom_block_component:
+        weight: 6
+        enabled: true
+      description_component:
+        weight: 4
+        enabled: true
+      image_component:
+        weight: 9
+        enabled: true
+      link_component:
+        weight: 13
+        enabled: true
+      section_component:
+        weight: 2
+        enabled: true
+      title_component:
+        weight: 4
+        enabled: true
+      webform:
+        weight: 8
+        enabled: true
+field_type: entity_reference_revisions

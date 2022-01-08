@@ -1,0 +1,10 @@
+uuid: 9e71d308-aaba-4926-807f-e04a39532b95
+langcode: en
+status: true
+dependencies: {  }
+id: link_component
+label: 'Link Component'
+icon_uuid: null
+icon_default: null
+description: 'This is to place a link'
+behavior_plugins: {  }

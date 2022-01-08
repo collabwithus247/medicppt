@@ -1,0 +1,10 @@
+uuid: 26fd5118-4fe0-4fa1-9b51-5c7058400a7b
+langcode: en
+status: true
+dependencies: {  }
+id: custom_block_component
+label: 'Custom Block Component'
+icon_uuid: null
+icon_default: null
+description: 'This is to add custom block'
+behavior_plugins: {  }

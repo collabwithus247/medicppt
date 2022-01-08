@@ -1,0 +1,22 @@
+uuid: 1fb9f9c3-3431-44df-b1b3-752c136f7ae4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.banner_pages.field_add_components
+    - node.type.banner_pages
+  module:
+    - user
+id: node.banner_pages.teaser
+targetEntityType: node
+bundle: banner_pages
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_add_components: true

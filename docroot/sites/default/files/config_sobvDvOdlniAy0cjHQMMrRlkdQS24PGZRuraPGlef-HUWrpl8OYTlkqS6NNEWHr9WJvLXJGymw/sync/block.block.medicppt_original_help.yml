@@ -1,0 +1,22 @@
+uuid: 6657f65e-6f80-45e1-b89f-a40742684e8a
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - medicppt_original
+_core:
+  default_config_hash: '-laWx8WA-ikiIEH3NJQ0hVbjqk3iEuBms91LB0B4IQU'
+id: medicppt_original_help
+theme: medicppt_original
+region: content
+weight: -5
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

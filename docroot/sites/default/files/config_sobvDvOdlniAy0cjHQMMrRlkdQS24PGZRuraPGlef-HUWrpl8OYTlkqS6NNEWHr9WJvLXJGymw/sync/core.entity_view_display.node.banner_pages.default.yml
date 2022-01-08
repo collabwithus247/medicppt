@@ -1,0 +1,26 @@
+uuid: 623a72d4-2b00-4785-b38a-5c9199887044
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.banner_pages.field_add_components
+    - node.type.banner_pages
+  module:
+    - entity_reference_revisions
+    - user
+id: node.banner_pages.default
+targetEntityType: node
+bundle: banner_pages
+mode: default
+content:
+  field_add_components:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  links: true

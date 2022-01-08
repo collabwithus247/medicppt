@@ -1,0 +1,10 @@
+uuid: dbdaaa15-8dd8-40cf-ad47-9b47cef933d5
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.colored_background
+label: 'Colored Background'
+targetEntityType: paragraph
+cache: true

@@ -1,0 +1,10 @@
+uuid: ce299f5f-2848-4f90-aa0a-addbbc3663c3
+langcode: en
+status: true
+dependencies: {  }
+id: image_component
+label: 'Image Component'
+icon_uuid: null
+icon_default: null
+description: 'This is for Image'
+behavior_plugins: {  }

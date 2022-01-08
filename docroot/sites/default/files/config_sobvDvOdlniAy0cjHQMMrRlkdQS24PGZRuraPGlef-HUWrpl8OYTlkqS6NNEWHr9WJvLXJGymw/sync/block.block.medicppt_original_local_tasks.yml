@@ -1,0 +1,22 @@
+uuid: 4c4ad96d-ec9c-48a0-b558-b64bf713bf90
+langcode: en
+status: true
+dependencies:
+  theme:
+    - medicppt_original
+_core:
+  default_config_hash: Qf2BoIzd9py5AYXZj8fJzCYDyVk1-AWXcu-AqQeDZKA
+id: medicppt_original_local_tasks
+theme: medicppt_original
+region: fullwidth
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

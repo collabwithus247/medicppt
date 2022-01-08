@@ -1,0 +1,21 @@
+uuid: 100a02e2-3ed8-4b91-b208-6abc4ef0939b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.paragraph_view_mode
+    - paragraphs.paragraphs_type.section_component
+  module:
+    - paragraph_view_mode
+id: paragraph.section_component.paragraph_view_mode
+field_name: paragraph_view_mode
+entity_type: paragraph
+bundle: section_component
+label: 'Paragraph view mode'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: paragraph_view_mode

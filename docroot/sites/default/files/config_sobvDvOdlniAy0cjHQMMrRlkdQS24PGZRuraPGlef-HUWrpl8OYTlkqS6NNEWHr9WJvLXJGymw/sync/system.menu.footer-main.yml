@@ -1,0 +1,8 @@
+uuid: 831e3169-fca7-4aef-b75e-2d592e89dc07
+langcode: en
+status: true
+dependencies: {  }
+id: footer-main
+label: 'Footer Main'
+description: ''
+locked: false

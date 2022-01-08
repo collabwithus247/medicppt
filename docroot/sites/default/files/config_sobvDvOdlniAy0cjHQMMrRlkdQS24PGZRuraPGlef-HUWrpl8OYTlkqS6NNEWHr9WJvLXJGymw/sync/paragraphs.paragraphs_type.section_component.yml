@@ -1,0 +1,10 @@
+uuid: 1ef0a13e-01f0-4fc5-970d-187d821ba7ec
+langcode: en
+status: true
+dependencies: {  }
+id: section_component
+label: 'Section Component'
+icon_uuid: null
+icon_default: null
+description: 'This paragraph is used to group other paragraphs'
+behavior_plugins: {  }

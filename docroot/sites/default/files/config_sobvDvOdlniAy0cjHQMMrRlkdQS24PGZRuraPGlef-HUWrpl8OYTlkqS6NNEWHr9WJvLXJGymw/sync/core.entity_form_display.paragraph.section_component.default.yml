@@ -1,0 +1,68 @@
+uuid: 146807f4-029c-4bcb-a3f9-2bf3163c64bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.section_component.field_color
+    - field.field.paragraph.section_component.field_section_class
+    - field.field.paragraph.section_component.field_section_component
+    - field.field.paragraph.section_component.field_section_image
+    - field.field.paragraph.section_component.paragraph_view_mode
+    - paragraphs.paragraphs_type.section_component
+  module:
+    - color_field
+    - media_library
+    - paragraph_view_mode
+    - paragraphs
+id: paragraph.section_component.default
+targetEntityType: paragraph
+bundle: section_component
+mode: default
+content:
+  field_color:
+    type: color_field_widget_html5
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_section_class:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_section_component:
+    type: entity_reference_paragraphs
+    weight: 0
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+  field_section_image:
+    type: media_library_widget
+    weight: 3
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  paragraph_view_mode:
+    type: paragraph_view_mode
+    weight: 1
+    region: content
+    settings:
+      view_modes:
+        default: Default
+        colored_background: 'Colored Background'
+        image_background: 'Image Background'
+      default_view_mode: default
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

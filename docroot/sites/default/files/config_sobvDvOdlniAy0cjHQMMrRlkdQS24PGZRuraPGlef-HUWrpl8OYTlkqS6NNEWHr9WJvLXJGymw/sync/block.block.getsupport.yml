@@ -1,0 +1,25 @@
+uuid: 7defe32f-fa40-45ac-b184-888680820f73
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.get-support
+  module:
+    - system
+  theme:
+    - medicppt_original
+id: getsupport
+theme: medicppt_original
+region: footer_third
+weight: 0
+provider: null
+plugin: 'system_menu_block:get-support'
+settings:
+  id: 'system_menu_block:get-support'
+  label: 'Get Support'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

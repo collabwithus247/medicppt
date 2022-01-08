@@ -1,0 +1,48 @@
+uuid: 77d0a064-035b-497b-85fe-ccf24cea9897
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.image_background
+    - field.field.paragraph.section_component.field_color
+    - field.field.paragraph.section_component.field_section_class
+    - field.field.paragraph.section_component.field_section_component
+    - field.field.paragraph.section_component.field_section_image
+    - field.field.paragraph.section_component.paragraph_view_mode
+    - paragraphs.paragraphs_type.section_component
+  module:
+    - entity_reference_revisions
+id: paragraph.section_component.image_background
+targetEntityType: paragraph
+bundle: section_component
+mode: image_background
+content:
+  field_section_class:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_section_component:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_section_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_color: true
+  paragraph_view_mode: true

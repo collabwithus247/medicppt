@@ -1,0 +1,10 @@
+uuid: c5b12d2b-5495-43f5-961c-a5f14374e076
+langcode: en
+status: true
+dependencies: {  }
+id: basic_component
+label: 'Basic Component'
+icon_uuid: null
+icon_default: null
+description: 'This is for Image, Title, & Description'
+behavior_plugins: {  }

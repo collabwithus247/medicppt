@@ -1,0 +1,22 @@
+uuid: a9fdcb6e-5eaa-4591-9409-2ec8bb72b669
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.banner_pages
+id: node.banner_pages.status
+field_name: status
+entity_type: node
+bundle: banner_pages
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

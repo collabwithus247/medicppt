@@ -1,0 +1,10 @@
+uuid: 7c584c64-ec5b-4ea6-9266-eeac38fa4dff
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.image_background
+label: 'Image Background'
+targetEntityType: paragraph
+cache: true

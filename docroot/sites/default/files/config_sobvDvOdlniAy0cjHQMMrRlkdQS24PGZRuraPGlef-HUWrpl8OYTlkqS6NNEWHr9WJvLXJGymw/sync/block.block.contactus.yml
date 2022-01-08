@@ -1,0 +1,25 @@
+uuid: 53321bdf-619d-4aa2-84ff-f0e341e9fe55
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:16eaa2ed-f65e-4ac2-8e8c-2f0cd287cc89'
+  module:
+    - block_content
+  theme:
+    - medicppt_original
+id: contactus
+theme: medicppt_original
+region: footer_fourth
+weight: -8
+provider: null
+plugin: 'block_content:16eaa2ed-f65e-4ac2-8e8c-2f0cd287cc89'
+settings:
+  id: 'block_content:16eaa2ed-f65e-4ac2-8e8c-2f0cd287cc89'
+  label: 'Contact Us'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

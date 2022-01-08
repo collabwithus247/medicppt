@@ -1,0 +1,29 @@
+uuid: 5310c898-24fc-424f-bbdd-7d4a53fea3a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_image
+    - media.type.image
+    - paragraphs.paragraphs_type.section_component
+id: paragraph.section_component.field_section_image
+field_name: field_section_image
+entity_type: paragraph
+bundle: section_component
+label: 'Section Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

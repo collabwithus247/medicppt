@@ -1,0 +1,25 @@
+uuid: aa4a2991-f2d3-4ad3-9e78-1ac29237b0ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-main
+  module:
+    - system
+  theme:
+    - medicppt_original
+id: footermain
+theme: medicppt_original
+region: footer_second
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-main'
+settings:
+  id: 'system_menu_block:footer-main'
+  label: 'Quick Links'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

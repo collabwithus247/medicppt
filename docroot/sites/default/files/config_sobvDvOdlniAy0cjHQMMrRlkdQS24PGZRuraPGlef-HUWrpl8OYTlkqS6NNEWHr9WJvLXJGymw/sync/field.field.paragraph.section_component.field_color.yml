@@ -1,0 +1,25 @@
+uuid: 3f983b1c-0a30-441f-9633-e8f513f54499
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color
+    - paragraphs.paragraphs_type.section_component
+  module:
+    - color_field
+id: paragraph.section_component.field_color
+field_name: field_color
+entity_type: paragraph
+bundle: section_component
+label: Color
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    color: '#3f36c9'
+    opacity: 0.5
+default_value_callback: ''
+settings:
+  opacity: 1
+field_type: color_field_type

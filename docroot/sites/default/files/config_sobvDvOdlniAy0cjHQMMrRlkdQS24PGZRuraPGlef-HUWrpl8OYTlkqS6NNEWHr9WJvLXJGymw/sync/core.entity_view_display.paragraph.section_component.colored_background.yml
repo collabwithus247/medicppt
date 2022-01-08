@@ -1,0 +1,49 @@
+uuid: 6a03a099-d6c2-4940-96ea-5a5361a0f08f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.colored_background
+    - field.field.paragraph.section_component.field_color
+    - field.field.paragraph.section_component.field_section_class
+    - field.field.paragraph.section_component.field_section_component
+    - field.field.paragraph.section_component.field_section_image
+    - field.field.paragraph.section_component.paragraph_view_mode
+    - paragraphs.paragraphs_type.section_component
+  module:
+    - color_field
+    - entity_reference_revisions
+id: paragraph.section_component.colored_background
+targetEntityType: paragraph
+bundle: section_component
+mode: colored_background
+content:
+  field_color:
+    type: color_field_formatter_text
+    label: hidden
+    settings:
+      format: rgb
+      opacity: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_section_class:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_section_component:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_section_image: true
+  paragraph_view_mode: true
