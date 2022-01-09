@@ -6,6 +6,7 @@ global-styling:
     js/imagesloaded.pkgd.min.js: {}
     js/jquery.multiselect.js: {}
     js/aos.js: {}
+    http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js: {type: external}
     js/scripts.js: {}
   css:
     component:
