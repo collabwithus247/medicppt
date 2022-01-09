@@ -61,7 +61,7 @@
   Drupal.behaviors.card_carousel = {
     attach: function (context, settings) {
 
-      var sectionComponents = document.querySelectorAll('.paragraph--type--section-component');
+      var sectionComponents = document.querySelectorAll('.paragraph--type--card-carousel-component');
 
       sectionComponents.forEach(section => {
         var carouselList = section.querySelector('.paragraph--type--card-carousel-component.paragraph--view-mode--default .field__items');

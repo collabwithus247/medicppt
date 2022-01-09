@@ -42,6 +42,7 @@ elements: |-
     phone_number:
       '#type': tel
       '#title': 'Phone Number'
+      '#placeholder': 'Enter Phone Number'
       '#required': true
       '#telephone_validation_format': '2'
       '#telephone_validation_country': IN
@@ -78,7 +79,7 @@ settings:
   form_unsaved: false
   form_disable_back: false
   form_submit_back: false
-  form_disable_autocomplete: false
+  form_disable_autocomplete: true
   form_novalidate: false
   form_disable_inline_errors: false
   form_required: false
