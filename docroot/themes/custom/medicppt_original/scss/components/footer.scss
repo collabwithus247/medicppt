@@ -1,30 +1,99 @@
-.site-footer {
-    background: $primary-color;
-    .site-footer__top {
-        h2 {
-            color: $white;     
-            margin-bottom: 10px;       
+.site-footer{
+    background: #414bac;
+    padding: 50px 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    .site-footer__top{
+        display: flex;
+        flex-wrap: wrap;
+        .region{
+            width: 25%;
+            padding: 0 15px;
+            float: none;
+            .block {
+                margin: 0;
+                border: none;
+                border-color: inherit;
+                padding: 0;
+                .contact-reach-block{
+                    padding: 0;
+                    margin: 18px 0 42px;
+                    list-style: none;
+                    li{
+                        color: #fff;
+                        padding: 0;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 12px;
+                        div{
+                            padding-right: 10px;
+                        }
+                        small{
+                            display: block;
+                            color: #fff;
+                            font-size: 12px;
+                            margin-bottom: 2px;
+                        }
+                        a{
+                            font-size: 13px;
+                            color: #fff;
+                            font-weight: 500;
+                            padding: 0;
+                            text-indent: 0;
+                            border: none;
+                            background: transparent;
+                        }
+                    }
+                }
+                .social-links{
+                    padding: 0;
+                    margin: 0;
+                    list-style: none;
+                    display: flex;
+                    align-items: center;
+                    margin-left: -10px;
+                    li{
+                        margin: 0 10px;
+                    }
+                }
+            }
         }
-        ul {
-            &.nav {
-                flex-direction: column;
-                li {
-                    a {
-                        padding: 10px 0;
-                        color: $white;
+        h2{
+            font-size: 16px;
+            color: #fff;
+            border: none;
+            padding: 0;
+            margin-bottom: 12px;
+        }
+        .nav{
+            display: block;
+            li{
+                margin-bottom: 15px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                a{
+                    color: #fff;
+                    padding: 0;
+                    font-size: 13px;
+                    &:hover{
+                        text-decoration: underline;
+                        opacity: 0.8;
                     }
                 }
             }
         }
     }
 }
-.site-copyright {
-    padding: 10px 0;
+.region-copyright{
+    background: #414bac;
+    border-top: 1px dashed #fff;
     text-align: center;
-    background: $primary-color;
-    border-top: 2px dashed $white;
-    p {
-        margin: 0;
-        color: $white;
+    padding: 10px 15px;
+    p{
+      color: #fff;
+      margin: 0;
+      font-weight: 300;
+      font-size: 12px;
     }
 }

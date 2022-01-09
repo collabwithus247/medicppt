@@ -1,231 +1,313 @@
-.banner-pages--components {
-    .main-wrapper {
-        > .field__item {
-            > div {
-                padding: 60px 0;                
+.container{
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .node__content{
+      margin: 0 !important;
+      font-size: 15px;
+  }
+.medicppt-about-us{
+    background-color: #F0F2FF;
+    padding: 55px 0;
+    text-align: center;
+    .field--name-field-title{
+        font-size: 24px;
+        margin-bottom: 18px;
+        line-height: 1;
+        font-weight: 700;
+    }
+    
+    .paragraph{
+        margin-bottom: 24px;
+    }
+}
+.field--type-entity-reference{
+    margin: 0 !important;
+}
+.node .field--type-image{
+    float: none !important;
+    margin: 0 !important;
+}
+.medicppt-services{
+    background-color: #F0F2FF;
+    padding: 50px 0;
+    .field--name-field-title{
+        font-size: 24px;
+        margin-bottom: 18px;
+        line-height: 1;
+        font-weight: 700;
+    }
+}
+.medicppt-why-choose-us{
+    background-color: #414BAC;
+    padding: 50px 0;
+    .field--name-field-title{
+        font-size: 24px;
+        color: #fff;
+        margin-bottom: 50px;
+        line-height: 1;
+        font-weight: 700;
+        text-align: center;
+    }
+    .field--name-field-link{
+        a{
+            background: #fff;
+            display: block;
+            text-align: center;
+            color: #414BAC;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 20px 15px;
+            border-radius: 10px;
+            max-width: 235px;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+    .medicppt-service-card{
+        max-width: 100%;
+        width: 100%;
+        .field--name-field-section-component{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            > .field__item{
+                width: 33.33%;
+                text-align: center;
+                padding: 0 20px 55px;
+                color: #fff;
             }
-            .medicppt-why-choose-us {
-                .paragraph--type--title-component {
-                    .field--name-field-title {
-                        text-align: center;
-                        color: $white;
-                        font-family: $sstpro_medium;
-                        font-size: 24px;
-                        margin-bottom: 32px;
-                    }
-                }
-                .paragraph--type--section-component {
-                    .field__items {
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: center;
-                        margin-left: -15px;
-                        margin-right: -15px;
-                        > .field__item {
-                            margin-bottom: 24px;
-                            padding-left: 15px;
-                            padding-right: 15px;
-                            flex: 0 0 33.3333%;
-                            max-width: 33.3333%;
-                            .paragraph--type--basic-component {
-                                text-align: center;
-                                .field--name-field-image {
-                                    margin: 0;
-                                    .field--name-field-media-image {
-                                        float: none;
-                                        margin: 0;
-                                        height: 55px;
-                                        img {
-                                            margin: 0;
-                                        }
-                                    }
-                                }
-                                .field--name-field-title {
-                                    color: $white;
-                                    font-family: $sstpro_medium;
-                                    font-size: 18px;
-                                    margin-bottom: 20px;
-                                }
-                                .field--name-field-description {
-                                    p {
-                                        color: $white;
-                                        font-size: 14px;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                .paragraph--type--link-component {
-                    .field--name-field-link {
-                        text-align: center;
-                        a {
-                            padding: 10px 40px 14px;
-                            display: inline-block;
-                            color: $primary-color;
-                            font-family: $sstpro_medium;
-                            font-size: 20px;
-                            background: $white;
-                            border-radius: 5px;
-                        }
-                    }
-                }
+            .field--name-field-title{
+                font-size: 16px;
+                font-weight: 500;
+                margin: 0 0 14px;
             }
-            .medicppt-speciality {
-                .field--name-field-section-component {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    margin-left: -15px;
-                    margin-right: -15px;
-                    > .field__item {
-                        padding-left: 15px;
-                        padding-right: 15px;
-                        flex: 0 0 50%;
-                        max-width: 50%;
-                        .paragraph--type--description-component {
-                            .field--name-field-description {
-                                h2 {
-                                    font-family: $sstpro_medium;
-                                    font-size: 24px;
-                                    margin-bottom: 24px;
-                                }
-                                p {
-                                    font-size: 14px;
-                                }
-                                ul {
-                                    li {
-                                        font-size: 14px;
-                                        padding-bottom: 10px;
-                                    }
-                                }
-                            }
-                        }
-                    }
+            .field--type-image{
+                img{
+                    margin: 0 0 10px;
                 }
             }
-            .medicppt-team {
-                .field--name-field-section-component {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    margin-left: -15px;
-                    margin-right: -15px;
-                    > .field__item {
-                        padding-left: 15px;
-                        padding-right: 15px;
-                        flex: 0 0 50%;
-                        max-width: 50%;
-                        .paragraph--type--description-component {
-                            .field--name-field-description {
-                                h2 {
-                                    font-family: $sstpro_medium;
-                                    font-size: 24px;
-                                    margin-bottom: 24px;
-                                }
-                                p {
-                                    font-size: 14px;
-                                }
-                                ul {
-                                    li {
-                                        font-size: 14px;
-                                        padding-bottom: 10px;
-                                    }
-                                }
-                            }
-                        }
-                    }
+            p{
+                font-weight: 300;
+                font-size: 13px;
+                color: #fff;
+                line-height: 1.56;
+                margin: 0;
+            }
+         
+        }
+        
+    }
+   
+}
+
+.medicppt-speciality{
+    background: #fff;
+    padding: 70px 0;
+    .field--name-field-section-component{
+        display: flex;
+        flex-wrap: wrap;
+        > .field__item{
+            width: 55%;
+            .paragraph--type--image-component{
+                img{
+                    max-width: 100%;
+                    display: block;
+                    height: auto;
+                    margin: 0;
                 }
             }
-            .medicppt-contact-us {
-                .field--name-field-section-component {
-                    > .field__item {
-                        .paragraph--type--title-component {
-                            .field--name-field-title {
-                                text-align: center;
-                                color: $white;
-                                font-family: $sstpro_medium;
-                                font-size: 24px;
-                            }
-                        }
-                        .paragraph--type--description-component {
-                            .field--name-field-description {
-                                text-align: center;
-                                p {
-                                    text-align: center;
-                                    color: $white;
-                                }
-                            }
-                        }
-                        .paragraph--type--custom-block-component {
-                            #block-socialicons {
-                                display: none;
-                            }
-                        }
-                        .paragraph.paragraph--type--webform {
-                            padding: 30px;
-                            max-width: 70%;
-                            margin: 0 auto;
-                            border-radius: 30px;
-                            background: $white;
-                            .form-item-leave-us-message {
-                                text-align: center;
-                                label {
-                                    font-family: $sstpro_medium;
-                                    font-size: 24px;
-                                }
-                            }
-                            .js-form-wrapper {
-                                margin: 0 -15px;
-                                display: flex;
-                                flex-wrap: wrap;
-                                .js-form-item {
-                                    padding-left: 15px;
-                                    padding-right: 15px;
-                                    flex: 0 0 50%;
-                                    max-width: 50%;
-                                    label {
-                                        font-size: 12px;
-                                    }
-                                    .form-control {
-                                        border: none;
-                                        border-bottom: 2px solid #ccc;
-                                        padding: 5px 0;
-                                        border-radius: 0px;
-                                        &:focus {
-                                            box-shadow: unset;
-                                        }
-                                    }
-                                }
-                            }
-                            .form-item-describe-your-request {
-                                label {
-                                    margin-bottom: 5px;
-                                }
-                                textarea.form-control {
-                                    min-height: 100px;
-                                    height: 100px;
-                                    border-radius: 10px;
-                                    &:focus {
-                                        box-shadow: unset;
-                                    }
-                                }
-                            }
-                            .form-actions {
-                                justify-content: center;
-                                .btn-primary {
-                                    padding: 10px 30px 13px;
-                                    color: $white;
-                                    background: $primary-color;
-                                    &:focus {
-                                        box-shadow: unset;
-                                    }
-                                }
-                            }
-                        }
+            h2{
+                font-size: 20px;
+                font-weight: 700;
+                margin-bottom: 12px;
+            }
+            p{
+                font-size: 13px;
+                margin: 0 0 0;
+            }
+            ul{
+                margin: 0;
+                padding: 28px 0 0 9px;
+                li{
+                    color: #202020;
+                    font-size: 15px;
+                    list-style: none;
+                    position: relative;
+                    margin-bottom: 18px;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    &::before{
+                        position: absolute;
+                        left: -8px;
+                        top: 10px;
+                        width: 3px;
+                        height: 3px;
+                        border-radius: 50%;
+                        background: #666;
+                        content: "";
                     }
                 }
             }
+        }
+        > .field__item + .field__item{
+            width: 45%;
+            padding: 5px 0 0 75px;
+        }
+    }
+}
+.medicppt-team{
+    background-color: #F0F2FF;
+    padding: 110px 0;
+    h2{
+        font-size: 24px;
+        margin-bottom: 18px;
+        line-height: 1;
+        font-weight: 700;
+    }
+    .field--name-field-section-component{
+        display: flex;
+        flex-wrap: wrap;
+        > .field__item{
+            width: 46%;
+            padding: 0 100px 0 0;
+            .paragraph--type--description-component{
+                padding-top: 20px;
+            }
+            p{
+                line-height: 2;
+            }
+        }
+        > .field__item + .field__item{
+            width: 54%;
+        }
+    }
+}
+
+.medicppt-contact-us{
+    padding: 55px 0 45px;
+    .field--name-field-title{
+        font-size: 24px;
+        margin-bottom: 8px;
+        line-height: 1;
+        font-weight: 700;
+        color: #fff;
+        text-align: center;
+    }
+    .field--name-field-description{
+        p{
+            color: #fff;
+            font-size: 13px;
+            text-align: center;
+            font-weight: 300;
+            margin: 0 0 40px;
+        }
+    }
+  .paragraph--type--custom-block-component{
+      .block-block-content{
+          ul{
+            margin: 0 0 28px;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            li{
+                color: #fff;
+                padding: 0 25px;
+                display: flex;
+                align-items: center;
+                div{
+                    padding-right: 13px;
+                }
+                small{
+                    display: block;
+                    color: #fff;
+                    font-size: 16px;
+                    font-weight: 700;
+                }
+                a{
+                    font-size: 14px;
+                    color: #fff;
+                }
+            }
+          }
+      }
+  }
+}
+.webform-submission-form{
+    max-width: 670px;
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 20px;
+    padding: 26px 26px 4px;
+    .js-form-item-leave-us-message{
+        label{
+            font-size: 18px;
+            font-weight: 500;
+            text-align: center;
+            display: block;
+        }
+    }
+    .js-form-wrapper{
+        display: flex;
+        justify-content: space-between;
+        .js-form-item {
+            width: 48%;
+            margin-bottom: 2px !important;
+        }
+        label{
+            font-size: 10px;
+            color: #DBE0E3;
+            padding-bottom: 5px;
+        }
+        .form-control{
+            border: none;
+            border-bottom: 1px solid #E9E9E9;
+            padding: 0;
+            font-size: 12px;
+            border-radius: 0;
+            outline: none;
+            color: #333;
+            box-shadow: inherit;
+            &.is-invalid{
+                border-color: #dc3545;
+            }
+        }
+    }
+    .js-form-type-textarea{
+        label{
+            font-size: 11px;
+            color: #DBE0E3;
+            padding-bottom: 5px;
+        } 
+        .form-control{
+            border: 1px solid #E9E9E9;
+            padding: 0;
+            font-size: 12px;
+            outline: none;
+            color: #333;
+            box-shadow: inherit;
+            &.is-invalid{
+                border-color: #dc3545;
+            }
+        }
+    }
+    .form-actions{
+        .button{
+            max-width: 142px;
+            width: 100%;
+            margin: 5px auto 0;
+            background: #414BAC;
+            border: none;
+            padding: 12px 10px;
+            border-radius: 10px;
+            outline: none;
         }
     }
 }
