@@ -111,4 +111,7 @@
       }
     }
   }
+  $('.medicppt-why-choose-us .medicppt-service-card .paragraph').click(function(){
+     $(this).toggleClass('show-data')
+  })
 }(jQuery, Drupal, drupalSettings));

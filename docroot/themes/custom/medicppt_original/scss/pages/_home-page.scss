@@ -3,6 +3,18 @@
     width: 100%;
     margin: 0 auto;
     padding: 0;
+    @include mquery(tablet){
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+    }
+  }
+  body{
+      display: table;
+      width: 100%;
+  }
+  img{
+      max-width: 100%;
+      height: auto;
   }
   .node__content{
       margin: 0 !important;
@@ -12,11 +24,32 @@
     background-color: #F0F2FF;
     padding: 55px 0;
     text-align: center;
+    @include mquery(mobile){
+        padding: 40px 0;
+    }
     .field--name-field-title{
         font-size: 24px;
         margin-bottom: 18px;
         line-height: 1;
         font-weight: 700;
+    }
+    .field--name-field-media-image{
+       .field__item{
+           display: inline-flex;
+           position: relative;
+           &::after{
+               position: absolute;
+               top: 50%;
+               left: 0;
+               right: 0;
+               width: 100%;
+               margin: 0 auto;
+               transform: translateY(-50%);
+               content: "http://medicppt.com/";
+               font-size: 18px;
+               color: #fff;
+           }
+       }
     }
     
     .paragraph{
@@ -32,17 +65,58 @@
 }
 .medicppt-services{
     background-color: #F0F2FF;
-    padding: 50px 0;
+    padding: 50px 0 120px;
+    @include mquery(mobile){
+      padding: 40px 0 90px;
+    }
     .field--name-field-title{
         font-size: 24px;
         margin-bottom: 18px;
         line-height: 1;
         font-weight: 700;
     }
+    p{
+        width: 66%;
+        margin-bottom: 60px;
+        @include mquery(mobile){
+            width: 100%;
+         }
+    }
+    .paragraph--type--card-carousel-component{
+        margin: 0 40px 0 40px;
+        .field--name-field-card-component{
+            height: auto;
+            padding: 178px;
+            @include mquery(mobile){
+                width: 320px;
+                margin: 0 auto;
+                padding: 57px 0 90px 0;
+            }
+            .field--name-field-title{
+                color: #1B1B1B;
+                text-align: center;
+                margin: 52px 0 0 0;
+                display: none;
+                @include mquery(mobile){
+                    margin: 27px 0 0 0;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+ 
+}
+.field__item[data-pos="0"]{
+  .field--name-field-title{
+    display: block !important;
+   }
 }
 .medicppt-why-choose-us{
     background-color: #414BAC;
     padding: 50px 0;
+    @include mquery(mobile){
+      padding: 40px 0;
+    }
     .field--name-field-title{
         font-size: 24px;
         color: #fff;
@@ -50,6 +124,9 @@
         line-height: 1;
         font-weight: 700;
         text-align: center;
+        @include mquery(mobile){
+            margin-bottom: 30px;
+        }
     }
     .field--name-field-link{
         a{
@@ -64,11 +141,17 @@
             max-width: 235px;
             width: 100%;
             margin: 0 auto;
+            @include mquery(mobile){
+                padding: 15px;
+            }
         }
     }
     .medicppt-service-card{
         max-width: 100%;
         width: 100%;
+        @include mquery(mobile){
+            padding: 0 !important;
+        }
         .field--name-field-section-component{
             display: flex;
             flex-wrap: wrap;
@@ -78,15 +161,25 @@
                 text-align: center;
                 padding: 0 20px 55px;
                 color: #fff;
+                @include mquery(mobile){
+                  width: 100%;
+                  padding: 0 0 20px;
+                }
             }
             .field--name-field-title{
                 font-size: 16px;
                 font-weight: 500;
                 margin: 0 0 14px;
+                @include mquery(mobile){
+                 margin: 0 0 0 10px;
+                }
             }
             .field--type-image{
                 img{
                     margin: 0 0 10px;
+                    @include mquery(mobile){
+                      margin: 0;
+                    }
                 }
             }
             p{
@@ -98,6 +191,42 @@
             }
          
         }
+        .paragraph{
+            @include mquery(mobile){
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                position: relative;
+                cursor: pointer;
+                border-bottom: 1px solid #fff;
+                padding-bottom: 12px;
+                margin-bottom: 10px;
+               &::after{
+                   position: absolute;
+                   right: 0;
+                   top: 11px;
+                   font-size: 18px;
+                   color: #fff;
+                   content: "+";
+                   pointer-events: none;
+               }
+              
+               .field--name-field-description{
+                 width: 100%;
+                 text-align: left;
+                 display: none;
+                 padding: 12px 0 0 0;
+                }
+            }
+            &.show-data{
+                &::after{
+                    content: "-";
+                }
+                .field--name-field-description{
+                    display: block;
+                }
+            }
+        }
         
     }
    
@@ -106,12 +235,21 @@
 .medicppt-speciality{
     background: #fff;
     padding: 70px 0;
+    @include mquery(mobile){
+        padding: 40px 0;
+    }
     .field--name-field-section-component{
         display: flex;
         flex-wrap: wrap;
         > .field__item{
             width: 55%;
+            @include mquery(mobile){
+              width: 100%;
+            }
             .paragraph--type--image-component{
+                @include mquery(mobile){
+                    padding-bottom: 30px;
+                }
                 img{
                     max-width: 100%;
                     display: block;
@@ -156,12 +294,19 @@
         > .field__item + .field__item{
             width: 45%;
             padding: 5px 0 0 75px;
+            @include mquery(mobile){
+                width: 100%;
+                padding: 0 !important;
+            }
         }
     }
 }
 .medicppt-team{
     background-color: #F0F2FF;
     padding: 110px 0;
+    @include mquery(mobile){
+        padding: 50px 0;
+    }
     h2{
         font-size: 24px;
         margin-bottom: 18px;
@@ -174,8 +319,15 @@
         > .field__item{
             width: 46%;
             padding: 0 100px 0 0;
+            @include mquery(mobile){
+                width: 100%;
+                padding: 0 0 20px !important;
+            }
             .paragraph--type--description-component{
                 padding-top: 20px;
+                @include mquery(mobile){
+                    padding: 0 !important;
+                }
             }
             p{
                 line-height: 2;
@@ -183,6 +335,9 @@
         }
         > .field__item + .field__item{
             width: 54%;
+            @include mquery(mobile){
+                width: 100%;
+            }
         }
     }
 }
@@ -246,6 +401,9 @@
     background: #fff;
     border-radius: 20px;
     padding: 26px 26px 4px;
+    .alert-wrapper{
+        display: none;
+    }
     .js-form-item-leave-us-message{
         label{
             font-size: 18px;
@@ -265,6 +423,15 @@
             font-size: 10px;
             color: #DBE0E3;
             padding-bottom: 5px;
+            &::after{
+                background-size: 3px 3px;
+                width: 5px;
+                height: 5px;
+                margin: 0;
+                position: relative;
+                top: 3px;
+                left: 2px;
+           }
         }
         .form-control{
             border: none;
@@ -285,6 +452,15 @@
             font-size: 11px;
             color: #DBE0E3;
             padding-bottom: 5px;
+            &::after{
+                background-size: 3px 3px;
+                width: 5px;
+                height: 5px;
+                margin: 0;
+                position: relative;
+                top: 3px;
+                left: 2px;
+           }
         } 
         .form-control{
             border: 1px solid #E9E9E9;
@@ -309,5 +485,110 @@
             border-radius: 10px;
             outline: none;
         }
+    }
+} 
+.medicppt-whom-do-we-serve{
+    padding: 50px 0 45px;
+    @include mquery(mobile){
+        padding: 40px 0;
+    }
+    .form-row>fieldset, .form-row>div{
+        margin: 0 !important;
+        padding: 0;
+    }
+    .field--name-field-title{
+        font-size: 24px;
+        margin-bottom: 4px;
+        line-height: 1;
+        font-weight: 700;
+    }
+    .radio{
+        display: flex;
+        padding: 0 40px 0 0;
+        margin: 0 0 18px;
+        @include mquery(mobile){
+            padding: 0 20px 0 0;
+        }
+        &:last-child{
+            padding-right: 0;
+            @include mquery(mobile){
+                padding: 0;
+            }
+        }
+        .form-check-label{
+            font-size: 17px;
+            font-weight: 300;
+            color: #A9A9B3;
+            padding: 0 15px 10px;
+            position: relative;
+            cursor: pointer;
+            @include mquery(mobile){
+                font-size: 15px;
+                padding: 0 10px 8px;
+            }
+        }
+        input{
+            display: none;
+            &:checked ~{
+                .form-check-label{
+                    color: #202020;
+                    font-weight: 500;
+                    &::after{
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        height: 3px;
+                        border-radius: 5px;
+                        background: #414BAC;
+                        width: 100%;
+                        content: "";
+                    }
+                } 
+            }
+        }
+       
+    }
+    .view-content{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 27px;
+        @include mquery(mobile){
+            gap: 0;
+        }
+        .views-row {
+            width: calc(25% - 27px);
+            background: #fff;
+            box-shadow: 0 0 11px 1px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            padding: 15px;
+            @include mquery(mobile){
+               width: 100%;
+               margin-bottom: 20px;
+               &:last-child{
+                   margin-bottom: 0;
+               }
+            }
+            .card{
+                border: none;
+                p{
+                    font-size: 16px;
+                    color: #202020;
+                    font-weight: 500;
+                    line-height: 1.2;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+.ui-widget.ui-widget-content.ui-dialog{
+    top:50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+}
+@include mquery(mobile){
+    .paragraph--type--card-carousel-component.paragraph--view-mode--default>.field__items>.field__item{
+        width: 208px;
+        height: 150px;
     }
 }

@@ -3,6 +3,9 @@
   align-items: center;
   box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.15);
   background: #414bac;
+  @include mquery(mobile){
+    
+  }
   nav.navbar{
     max-width: 1140px;
     width: 100%;
