@@ -22,7 +22,7 @@ let gulp = require('gulp'),
   ];
 
 // To remove [dir] attribute.
-function addPrefixToSelector ( selector, prefix ) {
+function addPrefixToSelector(selector, prefix) {
   if (prefix === '[dir]') {
     return `${selector}`
   }
@@ -45,7 +45,7 @@ const paths = {
 }
 
 // Compile sass into CSS & auto-inject into browsers
-function styles () {
+function styles() {
   return gulp.src([paths.scss.src])
     .pipe(sourcemaps.init())
     .pipe(sass())
@@ -56,18 +56,20 @@ function styles () {
         'ie >= 9'
       ]
     })]))
-    .pipe(postcss( [ rtl( options ) ]))
+    .pipe(postcss([rtl(options)]))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.scss.dest))
     .pipe(cleanCss())
-    .pipe(rename({ suffix: '.min' }))
+    .pipe(rename({
+      suffix: '.min'
+    }))
     .pipe(gulp.dest(paths.scss.dest))
     .pipe(browserSync.stream())
 }
 
 
 
-function serve () {
+function serve() {
   gulp.watch([paths.scss.watch])
 }
 
@@ -77,3 +79,32 @@ exports.styles = styles
 exports.serve = serve
 
 exports.default = build
+
+
+gulp.task('watch', function () {
+  gulp.watch('./scss/**/*.scss', gulp.series('all'));
+  // Other watchers
+})
+
+gulp.task('all', function () {
+
+  return gulp.src([paths.scss.src])
+    .pipe(sourcemaps.init())
+    .pipe(sass())
+    .pipe($.postcss(postcssProcessors))
+    .pipe(postcss([autoprefixer({
+      browsers: [
+        'last 2 versions',
+        'ie >= 9'
+      ]
+    })]))
+    .pipe(postcss([rtl(options)]))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(paths.scss.dest))
+    .pipe(cleanCss())
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(gulp.dest(paths.scss.dest))
+    .pipe(browserSync.stream())
+})
